@@ -10,6 +10,10 @@ public class ScoreScript : MonoBehaviour
 
     private TMP_Text ScoreText;
 
+    public GameObject player; //{ball}
+    public GameObject gameOverScreen; //{const TXT UI}
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,20 +23,31 @@ public class ScoreScript : MonoBehaviour
     }
 
 
-    [ContextMenu("addScore")]
+    [ContextMenu("addScore")]   
     public void addScore(int score)
     {
         playerScore+=score;
-        ScoreText.text = "Score: " + playerScore;
+       
         if (score == 1)
-            spawner.NumCoins--;
+            spawner.NumCoins--;    //we recorded the score; update the number of coins on the board {See ItemSpawner.cs}
         else
             spawner.NumHearts--;
-
-            Debug.Log("CurrentScore: " + playerScore);
+        ScoreText.text = "Score: " + playerScore.ToString(); //Update the playerScore on the UI element;
+            
     }
 
-  
+    public void restartGame()     //Player wants to restart
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void gameOver()
+    { 
+        player.SetActive(false);  //Disable the ball {player}
+        gameOverScreen.SetActive(true);     //show the GameOver TXT UI  
+        //Next Version: Include Animations on the TXT UI Game
+
+    }
 
 
 }

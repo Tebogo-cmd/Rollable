@@ -1390,8 +1390,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1322608531}
-        m_TargetAssemblyTypeName: ItemSpawner, Assembly-CSharp
+      - m_Target: {fileID: 2120923572}
+        m_TargetAssemblyTypeName: ScoreScript, Assembly-CSharp
         m_MethodName: restartGame
         m_Mode: 1
         m_Arguments:
@@ -1491,7 +1491,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -1567,8 +1567,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
   playerSphere: {fileID: 1886398472}
-  gameOverScreen: {fileID: 1343869565}
-  player: {fileID: 827027502}
+  LogicScript: {fileID: 0}
+  ball: {fileID: 827027502}
 --- !u!195 &1165794074
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1624,7 +1624,6 @@ Transform:
   - {fileID: 1521208780}
   - {fileID: 1014050101}
   - {fileID: 1826752009}
-  - {fileID: 2120923573}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1322608530
@@ -2249,8 +2248,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1886398472}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.2, y: 0.13, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.1999993, y: 0.12999998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2365,6 +2364,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   playerScore: 0
   spawner: {fileID: 0}
+  player: {fileID: 827027495}
+  gameOverScreen: {fileID: 1343869565}
 --- !u!4 &2120923573
 Transform:
   m_ObjectHideFlags: 0
@@ -2374,11 +2375,11 @@ Transform:
   m_GameObject: {fileID: 2120923571}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.86524, y: -1, z: 15.51001}
+  m_LocalPosition: {x: 2.86524, y: 0, z: 5.51001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1269451958}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -2388,6 +2389,7 @@ SceneRoots:
   - {fileID: 203844589}
   - {fileID: 919624034}
   - {fileID: 827027502}
+  - {fileID: 2120923573}
   - {fileID: 1269451958}
   - {fileID: 1322608532}
   - {fileID: 1423911913}

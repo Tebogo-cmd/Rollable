@@ -21,20 +21,6 @@ public class BallScript : MonoBehaviour
 
     }
 
-    private void OnEnable()
-    {
-        Debug.Log("OnEnable called");
-
-    }
-    private void OnDisable()
-    {
-        Debug.Log("Ball is Off");
-    }
-
-    private void Awake()
-    {
-        Debug.Log("AwakeCalled");
-    }
 
     // Update is called once per frame
     void FixedUpdate()
