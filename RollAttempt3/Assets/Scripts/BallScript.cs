@@ -26,6 +26,11 @@ public class BallScript : MonoBehaviour
     void FixedUpdate()
     {
         body.AddForce((new Vector3(nextPosition.x, 0f, nextPosition.y)) * speed);
+
+        if(Mouse.current.leftButton.isPressed)
+        {
+            body.AddForce((new Vector3(0, 0f, 2f)),ForceMode.Acceleration);
+        }
     }
 
 
