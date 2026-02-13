@@ -10,6 +10,7 @@ TagManager:
   - enemy2
   - enemy3
   - BallTag
+  - PauseTagg
   layers:
   - Default
   - TransparentFX
